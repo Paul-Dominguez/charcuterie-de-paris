@@ -16,7 +16,7 @@ export default function EventInquiryPage() {
           </h1>
           <div className="w-24 h-1 bg-gold mx-auto mb-6" />
           <p className="text-xl text-charcoal/70 max-w-2xl mx-auto">
-            Select a date and time to discuss your event. We'll help you choose the perfect board and finalize all the details.
+            Select a date and time to discuss your event. We&apos;ll help you choose the perfect board and finalize all the details.
           </p>
         </div>
 
