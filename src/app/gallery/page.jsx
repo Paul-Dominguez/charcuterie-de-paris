@@ -17,6 +17,8 @@ const galleryImages = [
   '/images/gallery/board-8.jpg',
   '/images/gallery/board-9.jpg',
   '/images/gallery/board-10.jpg',
+  '/images/gallery/CharcEvent.jpg',
+  '/images/gallery/CharcEvent2.jpg',
 ]
 
 export default function GalleryPage() {
@@ -42,12 +44,7 @@ export default function GalleryPage() {
           <p className="text-charcoal/70 mb-4">
             Follow us on Instagram for more inspiration
           </p>
-          <a
-            href="https://www.instagram.com/charcuterie_de_paris"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-gold hover:text-soft-gold transition-colors text-xl"
-          >
+          <a href="https://www.instagram.com/charcuterie_de_paris" target="_blank" rel="noopener noreferrer" className="inline-block text-gold hover:text-soft-gold transition-colors text-xl">
             @charcuterie_de_paris
           </a>
         </div>

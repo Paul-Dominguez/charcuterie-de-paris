@@ -1,9 +1,10 @@
 import PackageCard from '@/components/PackageCard'
+import Link from 'next/link'
 import { packages, addOns } from '@/lib/data'
 
 export const metadata = {
   title: 'Packages | Charcuterie de Paris',
-  description: 'Explore our luxury charcuterie board packages for gatherings of all sizes.',
+  description: 'Explore our luxury charcuterie board packages for your next event.',
 }
 
 export default function PackagesPage() {
@@ -17,40 +18,52 @@ export default function PackagesPage() {
           </h1>
           <div className="w-24 h-1 bg-gold mx-auto mb-6" />
           <p className="text-xl text-charcoal/70 max-w-2xl mx-auto">
-            Each board is thoughtfully curated with premium meats, artisanal cheeses, fresh fruits, and elegant accompaniments.
+            Choose the perfect board for your celebration. Each package is thoughtfully curated with premium ingredients.
           </p>
         </div>
 
-        {/* Package Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {packages.map((pkg, index) => (
-            <PackageCard key={pkg.id} package={pkg} index={index} />
+        {/* Packages Grid - CENTERED */}
+        <div className="flex flex-wrap justify-center gap-8 mb-16">
+          {packages.map((pkg) => (
+            <div key={pkg.id} className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-sm">
+              <PackageCard package={pkg} />
+            </div>
           ))}
         </div>
 
-        {/* Add-Ons Section */}
-        <div className="bg-ivory p-12 border-2 border-gold/30">
+        {/* Add-ons Section */}
+        <div className="mt-20 bg-ivory p-12 border-2 border-gold/30">
           <h2 className="text-3xl font-serif text-charcoal text-center mb-8">
             Optional Add-Ons
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {addOns.map((addOn, index) => (
-              <div key={index} className="text-center">
-                <p className="text-lg text-charcoal mb-2">{addOn.name}</p>
-                <p className="text-2xl font-serif text-gold">{addOn.price}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {addOns.map((addon) => (
+              <div key={addon.id} className="text-center">
+                <h3 className="text-lg font-serif text-charcoal mb-2">
+                  {addon.name}
+                </h3>
+                <p className="text-2xl text-gold font-serif mb-3">
+                  {addon.price}
+                </p>
+                <p className="text-sm text-charcoal/70">
+                  {addon.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-16">
-          <a
+        {/* CTA Section */}
+        <div className="mt-16 text-center">
+          <h2 className="text-3xl font-serif text-charcoal mb-6">
+            Ready to Book Your Event?
+          </h2>
+          <Link
             href="/event-inquiry"
-            className="inline-block bg-gold text-charcoal px-12 py-5 text-xl hover:bg-soft-gold transition-all duration-300 shadow-lg"
+            className="inline-block bg-gold text-charcoal px-12 py-4 text-lg hover:bg-soft-gold transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            Book Your Event
-          </a>
+            Schedule Your Consultation
+          </Link>
         </div>
       </div>
     </div>
