@@ -65,6 +65,14 @@ export const packages = [
     description: 'Perfect for individual portions or party favors.',
     isSeasonal: false,
   },
+  {
+    id: 'kids',
+    name: 'Kid Charcuterie Board',
+    guestCount: '8-12 kids',
+    price: '$45-$55',
+    description: 'Perfect for birthdays, playdates, and family events. Designed with kid-friendly favorites & fun presentation.',
+    isSeasonal: false,
+  },
 ];
 
 // Add-on options
